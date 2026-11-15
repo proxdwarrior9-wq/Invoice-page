@@ -1,0 +1,184 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "name": "Vikram Mehta",
+      "email": "admin@skyracloud.com",
+      "role": "admin",
+      "passwordHash": "8dab017d621ef06fbdc68ef667e10b6b:32c45b3283cb2d8572d5ed86e6e5a2b32ee6426f693598882566891cf2c4d498519f0bd03ac48f86ff7952082453d8d67c353b849736e026e7fba4c4fd34469d",
+      "createdAt": "2026-11-03T09:41:29.128Z"
+    },
+    {
+      "id": "usr_client_1",
+      "name": "Vihaan Sharma",
+      "email": "vikas@skyracloud.com",
+      "role": "customer",
+      "passwordHash": "b7173385b5601140e56e710f3d187c12:c893beddb7c192a5a3791bb706cf74be8bc43a9abfee6055bbaeca7f6cb19fadfe6df6a853d81bfea62ffcdc4e641e73514105813a93bc67b45f996fa981e513",
+      "createdAt": "2026-11-03T09:41:29.128Z"
+    },
+    {
+      "id": "usr_client_2",
+      "name": "Aarav Patel",
+      "email": "aarav@skyracloud.com",
+      "role": "customer",
+      "passwordHash": "e29786346b9439cb17e430b0791bc25c:cb0ae1c61fcf52b74127830f5e42e5c2d71a6e602d9c024132e7f52707c01044870a09e853447204392ed6188b06ed6bc1a4d28fb8f1b0b18898cb6a7e2859ce",
+      "createdAt": "2026-11-13T09:41:29.128Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv_bot_1",
+      "userId": "usr_client_1",
+      "name": "Bot-1",
+      "type": "Bot",
+      "plan": "Bot Node 1GB",
+      "specs": "1 GB RAM · 1 vCPU · 10 GB NVMe · 24/7 Uptime",
+      "node": "Mumbai IN-BOT1",
+      "ipAddress": "103.189.44.12:8080",
+      "priceMonthly": 30,
+      "expiryDate": "2026-12-10T09:41:29.128Z",
+      "status": "Active",
+      "createdAt": "2026-11-10T09:41:29.128Z"
+    },
+    {
+      "id": "srv_mc_1",
+      "userId": "usr_client_1",
+      "name": "MC-SMP-01",
+      "type": "Minecraft",
+      "plan": "MC Diamond 8GB",
+      "specs": "8 GB DDR5 · 4 vCPU Ryzen 9 · 60 GB NVMe · DDoS Shield",
+      "node": "Mumbai IN-02",
+      "ipAddress": "play.skyracloud.in:25565",
+      "priceMonthly": 599,
+      "expiryDate": "2026-12-03T09:41:29.128Z",
+      "status": "Active",
+      "createdAt": "2026-11-03T09:41:29.128Z"
+    },
+    {
+      "id": "srv_vps_1",
+      "userId": "usr_client_1",
+      "name": "VPS-IN-04",
+      "type": "VPS",
+      "plan": "VPS KVM-4",
+      "specs": "4 GB ECC RAM · 2 vCPU EPYC · 50 GB NVMe · 1 Gbps Unmetered",
+      "node": "Mumbai IN-VPS1",
+      "ipAddress": "103.189.45.88",
+      "priceMonthly": 649,
+      "expiryDate": "2026-11-13T09:41:29.128Z",
+      "status": "Suspended",
+      "createdAt": "2026-10-14T09:41:29.128Z"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_1003",
+      "invoiceNumber": "INV-2026-1003",
+      "userId": "usr_client_1",
+      "serviceId": "srv_vps_1",
+      "serviceName": "VPS-IN-04",
+      "serviceType": "VPS",
+      "plan": "VPS KVM-4",
+      "amount": 649,
+      "currency": "INR",
+      "status": "Suspended",
+      "issuedAt": "2026-11-08T09:41:29.128Z",
+      "dueDate": "2026-11-13T09:41:29.128Z",
+      "paidAt": null,
+      "expiryDate": "2026-11-13T09:41:29.128Z",
+      "items": [
+        {
+          "description": "VPS KVM-4 Monthly Renewal (Mumbai IN-VPS1)",
+          "qty": 1,
+          "unitPrice": 649,
+          "total": 649
+        }
+      ],
+      "notes": "Invoice overdue — service automatically suspended until payment confirmation."
+    },
+    {
+      "id": "inv_1002",
+      "invoiceNumber": "INV-2026-1002",
+      "userId": "usr_client_1",
+      "serviceId": "srv_bot_1",
+      "serviceName": "Bot-1",
+      "serviceType": "Bot",
+      "plan": "Bot Node 1GB",
+      "amount": 30,
+      "currency": "INR",
+      "status": "Paid",
+      "issuedAt": "2026-11-10T09:41:29.128Z",
+      "dueDate": "2026-11-12T09:41:29.128Z",
+      "paidAt": "2026-11-10T09:41:29.128Z",
+      "expiryDate": "2026-12-10T09:41:29.128Z",
+      "items": [
+        {
+          "description": "Bot Node 1GB Hosting — Bot-1 (30 Days)",
+          "qty": 1,
+          "unitPrice": 30,
+          "total": 30
+        }
+      ],
+      "notes": "Paid via UPI · Verified by SkyraCloud Billing."
+    },
+    {
+      "id": "inv_1001",
+      "invoiceNumber": "INV-2026-1001",
+      "userId": "usr_client_1",
+      "serviceId": "srv_mc_1",
+      "serviceName": "MC-SMP-01",
+      "serviceType": "Minecraft",
+      "plan": "MC Diamond 8GB",
+      "amount": 599,
+      "currency": "INR",
+      "status": "Paid",
+      "issuedAt": "2026-11-03T09:41:29.128Z",
+      "dueDate": "2026-11-05T09:41:29.128Z",
+      "paidAt": "2026-11-03T09:41:29.128Z",
+      "expiryDate": "2026-12-03T09:41:29.128Z",
+      "items": [
+        {
+          "description": "MC Diamond 8GB — MC-SMP-01 (Mumbai IN-02)",
+          "qty": 1,
+          "unitPrice": 599,
+          "total": 599
+        }
+      ],
+      "notes": "Paid via Razorpay / UPI."
+    }
+  ],
+  "notifications": [
+    {
+      "id": "ntf_1",
+      "userId": "usr_client_1",
+      "title": "New invoice created",
+      "message": "A new invoice was created on your account with total amount: ₹30.00.",
+      "read": false,
+      "createdAt": "2026-11-10T09:41:29.128Z"
+    },
+    {
+      "id": "ntf_2",
+      "userId": "usr_client_1",
+      "title": "Invoice marked as Paid",
+      "message": "Invoice INV-2026-1002 (₹30.00) has been confirmed as Paid.",
+      "read": false,
+      "createdAt": "2026-11-10T09:41:29.128Z"
+    },
+    {
+      "id": "ntf_3",
+      "userId": "usr_client_1",
+      "title": "Service activated",
+      "message": "Your service Bot-1 has been activated.",
+      "read": false,
+      "createdAt": "2026-11-10T09:41:29.128Z"
+    },
+    {
+      "id": "ntf_4",
+      "userId": "usr_client_1",
+      "title": "Invoice overdue — service suspended",
+      "message": "Invoice INV-2026-1003 for VPS-IN-04 (₹649.00) is unpaid and marked Suspended.",
+      "read": false,
+      "createdAt": "2026-11-13T09:41:29.128Z"
+    }
+  ],
+  "invoiceSeq": 1004
+}
